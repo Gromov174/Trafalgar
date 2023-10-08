@@ -1,0 +1,6 @@
+@import "mixins";
+
+@include fonts(Mulish, 300, MulishLight);
+@include fonts(Mulish, 400, MulishRegular);
+@include fonts(Mulish, 600, MulishSemiBold);
+@include fonts(Mulish, 700, MulishBold);

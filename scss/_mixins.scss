@@ -1,0 +1,13 @@
+@mixin fonts($family, $weigth, $name) {
+  @font-face {
+    font-family: "#{$family}";
+    src: url("../fonts/#{$name}.woff2") format("woff2");
+    font-weight: $weigth;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@mixin fontcalc($number) {
+  font-size: calc($number / 16px * 1rem);
+}
