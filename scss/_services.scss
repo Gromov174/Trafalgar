@@ -2,32 +2,53 @@
   position: relative;
   padding-bottom: 200px;
 
-  &::before {
-    content: '';
+  &__blob {
     position: absolute;
     top: 220px;
     left: -390px;
-    width: 945px;
-    height: 619px;
     z-index: -1;
-    background: url('../content/BackgroundElements/blob_1.svg') 0 0 / 100% 100% no-repeat;
+    max-width: 100%;
   }
-  &::after {
-    content: '';
+
+  &__dots {
     position: absolute;
     top: 520px;
     right: -30px;
-    width: 132px;
-    height: 115px;
     z-index: -1;
-    background: url('../content/BackgroundElements/dots_2.svg') 0 0 / 100% 100% no-repeat;
+    max-width: 100%;
   }
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 220px;
+  //   left: -390px;
+  //   width: 945px;
+  //   height: 619px;
+  //   z-index: -1;
+  //   background: url('../content/BackgroundElements/blob_1.svg') 0 0 / 100% 100% no-repeat;
+  // }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 520px;
+  //   right: -30px;
+  //   width: 132px;
+  //   height: 115px;
+  //   z-index: -1;
+  //   background: url('../content/BackgroundElements/dots_2.svg') 0 0 / 100% 100% no-repeat;
+  // }
 
   &__inner {
     display: flex;
-    flex-flow: column;
-    align-items: center;
+    flex-direction: column;
+    @include large-tablet {
+      align-items: center;
+    }
+    justify-content: center;
   }
+
 
   &__content {
     display: flex;
@@ -52,7 +73,8 @@
 
   &__cards {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 35px;
     padding-bottom: 70px;
   }
@@ -65,8 +87,14 @@
     box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.40);
     background: rgb(247, 247, 247);
     max-width: 350px;
+    min-width: 0px;
     transition: transform .3s;
     cursor: pointer;
+
+    @include large-tablet {
+      align-items: center;
+      text-align: center;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -88,5 +116,13 @@
       line-height: 175%;
       color: var(--font-second-color);
     }
+
   }
+
+  &__btn {
+    display: flex;
+    align-self: center;
+    // max-width: 200px;
+  }
+
 }

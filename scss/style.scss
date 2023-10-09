@@ -3,17 +3,50 @@
 
 html,
 body {
+  position: relative;
   font-family: "Mulish", sans-serif;
   overflow-x: hidden;
+  font-size: calc(100vw / 1920 * 10);
+
+
+  @include desktop {
+    font-size: calc(100vw / 1440 * 10);
+  }
+  @include small-desktop {
+    font-size: calc(100vw / 1024 * 10);
+  }
+  @include large-tablet {
+    font-size: calc(100vw / 922 * 10);
+  }
+  @include tablet {
+    font-size: calc(100vw / 768 * 10);
+  }
+  @include large-phone {
+    font-size: calc(100vw / 576 * 10);
+  }
+  @include phone {
+    font-size: calc(100vw / 420 * 10);
+  }
+  @include mini-phone {
+    font-size: calc(100vw / 320 * 10);
+  }
+}
+
+.html {
+  &--noscroll {
+    overflow-y: hidden;
+  }
 }
 
 .wrapper {
   max-width: 100%;
   min-height: 100%;
+  overflow: hidden;
+  
 }
 
 .container {
-  width: calc(1250px - 30px);
+  max-width: calc(1250px - 30px);
   height: 100%;
   margin: 0 auto;
   padding-left: 15px;
@@ -21,7 +54,7 @@ body {
 }
 
 .inner {
-  width: calc(1120px - 30px);
+  max-width: calc(1120px - 30px);
 }
 
 .btn {
@@ -29,7 +62,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 55px;
-  font-size: calc(18px / 16px * 1rem);
+  @include fontcalc(18px);
   font-weight: 700;
   padding: 15px 40px;
   background: var(--btn-color);
@@ -67,6 +100,14 @@ body {
   margin-bottom: 35px;
   color: var(--font-second-color);
 }
+
+// .overlay__menu {
+//   position: fixed;
+//   inset: 0;
+//   width: 100vw;
+//   background-color: #649dec;
+//   z-index: 9999;
+// }
 
 @import "header";
 @import "services";
