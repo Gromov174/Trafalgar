@@ -3,14 +3,23 @@ const burgerLine = document.querySelector('.header__burger-line')
 const overlay = document.querySelector('.header__nav-list')
 const noScroll = document.querySelector('.html')
 const btn = document.querySelectorAll('.btn')
+const nonActive = document.querySelectorAll('.disable-link')
+const link = document.querySelectorAll('a.anchor-link')
 
-btn.forEach(b => {
-  b.addEventListener('click', (e) => {
-    e.preventDefault()
+
+function disablelink(className) {
+  className.forEach(d => {
+    d.addEventListener('click', (e) => {
+      e.preventDefault()
+    })
   })
-})
+}
 
-document.querySelectorAll('a.anchor-link').forEach(link => {
+disablelink(btn);
+disablelink(nonActive);
+
+
+link.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault()
     if (overlay.classList.contains('header__nav-list--active') || burgerLine.classList.contains('header__burger-line--active')) {
@@ -19,7 +28,7 @@ document.querySelectorAll('a.anchor-link').forEach(link => {
     }
     const href = this.getAttribute('href').substring(1)
     const scrollTarget = document.getElementById(href)
-    const topOffset = 0
+    const topOffset = 20
     const elemenPosition = scrollTarget.getBoundingClientRect().top
     const offsetPosition = elemenPosition - topOffset
 
