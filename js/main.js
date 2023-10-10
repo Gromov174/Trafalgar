@@ -60,6 +60,7 @@ const swiper = new Swiper('.testimonials__slider', {
   // If we need pagination
   pagination: {
     el: '.testimonials__arrow-pagination',
+    clickable: true,
   },
 
   // Navigation arrows
