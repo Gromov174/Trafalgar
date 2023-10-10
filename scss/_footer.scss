@@ -4,7 +4,7 @@
   margin: 0 auto;
   height: 100%;
   background: linear-gradient(183deg, #67C3F3 -8.57%, #5A98F2 82.96%);
-  
+
 
   &::before {
     content: '';
@@ -15,6 +15,7 @@
     height: 115px;
     z-index: 0;
     background: url('../content/BackgroundElements/dots_7.svg') 0 0 / 100% 100% no-repeat;
+
     @include large-tablet {
       bottom: -30px;
     }
@@ -29,6 +30,7 @@
     height: 115px;
     z-index: 0;
     background: url('../content/BackgroundElements/dots_8.svg') 0 0 / 100% 100% no-repeat;
+
     @include large-tablet {
       top: -50px;
     }
@@ -38,6 +40,7 @@
     display: flex;
     justify-content: space-between;
     padding: 100px 0;
+
     @include tablet {
       justify-content: center;
       text-align: center;
@@ -51,9 +54,13 @@
   &__logo-box {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 12px;
     margin-bottom: 20px;
+
+    @include tablet {
+      justify-content: center;
+
+    }
 
     &:hover .footer__circle-text {
       color: #233348;
@@ -104,6 +111,7 @@
     @include tablet {
       display: none
     }
+
     &-title {
       @include fontcalc(20px);
       font-weight: 700;

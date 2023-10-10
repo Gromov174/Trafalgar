@@ -31,10 +31,11 @@
 
   &__img {
     width: 100%;
-    min-width: 50%;
+    max-width: 650px;
+    min-width: 500px;
 
     @include tablet {
-      min-width: none;
+      min-width: 0;
     }
   }
 
