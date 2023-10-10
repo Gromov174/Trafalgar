@@ -25,6 +25,7 @@ link.forEach(link => {
     if (overlay.classList.contains('header__nav-list--active') || burgerLine.classList.contains('header__burger-line--active')) {
       overlay.classList.remove('header__nav-list--active')
       burgerLine.classList.remove('header__burger-line--active')
+      noScroll.classList.remove('html--noscroll')
     }
     const href = this.getAttribute('href').substring(1)
     const scrollTarget = document.getElementById(href)
