@@ -203,6 +203,15 @@ body {
           align-items: center;
   padding: 50px 0 80px;
 }
+@media (max-width: 768px) {
+  .header__top {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .header__logo-box {
   display: -webkit-box;
   display: -webkit-flex;

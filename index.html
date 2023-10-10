@@ -14,35 +14,35 @@
 <body>
 
   <div class="wrapper">
-    <header class="header container">
+    <header  class="header container">
       <div class="header__top">
-        <a href="#" class="header__logo-box">
+        <a href="#home" class="header__logo-box anchor-link">
           <div class="header__circle">T</div>
           <div class="header__text">Trafalgar</div>
         </a>
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="#">
+            <a class="anchor-link" href="#home">
               Home
             </a>
           </li>
           <li class="header__nav-item">
-            <a href="#">
+            <a class="anchor-link" href="#find-doctor">
               Find a doctor
             </a>
           </li>
           <li class="header__nav-item">
-            <a href="#">
+            <a class="anchor-link" href="#apps">
               Apps
             </a>
           </li>
           <li class="header__nav-item">
-            <a href="#">
+            <a class="anchor-link" href="#testimonials">
               Testimonials
             </a>
           </li>
           <li class="header__nav-item">
-            <a href="#">
+            <a class="anchor-link" href="#about">
               About us
             </a>
           </li>
@@ -51,7 +51,7 @@
           <span class="header__burger-line"></span>
         </a>
       </div>
-      <div class="header__hero">
+      <div id="home" class="header__hero">
         <div class="header__content">
           <h1 class="header__content-title">
             Virtual healthcare
@@ -66,11 +66,11 @@
             Consult today
           </a>
         </div>
-        <img class="header__img" src="./content/LargeImage/1.svg" width="673" height="578"></img>
+        <img loading="lazy" class="header__img" src="./content/LargeImage/1.svg" width="673" height="578"></img>
       </div>
     </header>
     <main class="main">
-      <section class="services services__inner container inner">
+      <section id="find-doctor" class="services services__inner container inner">
         <div class="services__content">
           <h2 class="services__content-title">
             Our services
@@ -85,7 +85,7 @@
         <ul class="services__cards">
           <li class="services__card">
             <div class="services__card-inner">
-              <img src="./content/CardIcon/1.svg" alt="magnifer" width="92" height="90">
+              <img loading="lazy" src="./content/CardIcon/1.svg" alt="magnifer" width="92" height="90">
               <h3 class="services__card-title">Search doctor</h3>
               <p class="services__card-text">Choose your doctor from thousands of specialist, general, and trusted
                 hospitals</p>
@@ -93,42 +93,38 @@
           </li>
           <li class="services__card">
             <div class="services__card-inner">
-              <img src="./content/CardIcon/2.svg" alt="magnifer" width="92" height="90">
-              <h3 class="services__card-title">Search doctor</h3>
-              <p class="services__card-text">Choose your doctor from thousands of specialist, general, and trusted
-                hospitals</p>
+              <img loading="lazy" src="./content/CardIcon/2.svg" alt="pills" width="92" height="90">
+              <h3 class="services__card-title">Online pharmacy</h3>
+              <p class="services__card-text">Buy  your medicines with our mobile application with a simple delivery system </p>
             </div>
           </li>
           <li class="services__card">
             <div class="services__card-inner">
-              <img src="./content/CardIcon/3.svg" alt="magnifer" width="92" height="90">
-              <h3 class="services__card-title">Search doctor</h3>
-              <p class="services__card-text">Choose your doctor from thousands of specialist, general, and trusted
-                hospitals</p>
+              <img loading="lazy" src="./content/CardIcon/3.svg" alt="form" width="92" height="90">
+              <h3 class="services__card-title">Consultation</h3>
+              <p class="services__card-text">Free consultation with our trusted doctors and get the best recomendations</p>
             </div>
           </li>
           <li class="services__card">
             <div class="services__card-inner">
-              <img src="./content/CardIcon/4.svg" alt="magnifer" width="92" height="90">
-              <h3 class="services__card-title">Search doctor</h3>
-              <p class="services__card-text">Choose your doctor from thousands of specialist, general, and trusted
-                hospitals</p>
+              <img loading="lazy" src="./content/CardIcon/4.svg" alt="case" width="92" height="90">
+              <h3 class="services__card-title">Details info</h3>
+              <p class="services__card-text">Free consultation with our trusted doctors and get the best recomendations</p>
             </div>
           </li>
           <li class="services__card">
             <div class="services__card-inner">
-              <img src="./content/CardIcon/5.svg" alt="magnifer" width="92" height="90">
-              <h3 class="services__card-title">Search doctor</h3>
-              <p class="services__card-text">Choose your doctor from thousands of specialist, general, and trusted
-                hospitals</p>
+              <img loading="lazy" src="./content/CardIcon/5.svg" alt="suitcase" width="92" height="90">
+              <h3 class="services__card-title">Emergency care</h3>
+              <p class="services__card-text">You can get 24/7 urgent care for yourself or your children and your
+                lovely family</p>
             </div>
           </li>
           <li class="services__card">
             <div class="services__card-inner">
-              <img src="./content/CardIcon/6.svg" alt="magnifer" width="92" height="90">
-              <h3 class="services__card-title">Search doctor</h3>
-              <p class="services__card-text">Choose your doctor from thousands of specialist, general, and trusted
-                hospitals</p>
+              <img loading="lazy" src="./content/CardIcon/6.svg" alt="интервью" width="92" height="90">
+              <h3 class="services__card-title">Tracking</h3>
+              <p class="services__card-text">Track and save your medical history and health data </p>
             </div>
           </li>
         </ul>
@@ -137,7 +133,7 @@
         </a>
       </section>
       <section class="suppliers suppliers__inner container">
-        <img src="./content/LargeImage/2.svg" width="650" height="477" alt="suppliers" class="suppliers__img">
+        <img loading="lazy" src="./content/LargeImage/2.svg" width="650" height="477" alt="suppliers" class="suppliers__img">
         <div class="suppliers__content">
           <h2 class="suppliers__content-title">
             Leading healthcare providers
@@ -153,7 +149,7 @@
           </a>
         </div>
       </section>
-      <section class="mobileapps mobileapps__inner container">
+      <section id="apps" class="mobileapps mobileapps__inner container">
         <div class="mobileapps__content">
           <h2 class="mobileapps__content-title title">
             Download our
@@ -169,9 +165,9 @@
             <span>Download</span>
           </a>
         </div>
-        <img src="./content/LargeImage/3.svg" width="650" height="477" alt="mob" class="mobileapps__img">
+        <img loading="lazy" src="./content/LargeImage/3.svg" width="650" height="477" alt="mob" class="mobileapps__img">
       </section>
-      <section class="testimonials testimonials__inner container inner">
+      <section id="testimonials" class="testimonials testimonials__inner container inner">
         <div class="testimonials__box  testimonials__slider">
           <h2 class="testimonials__title">What our customer are saying</h2>
           <div class="testimonials__separator separator"></div>
@@ -179,7 +175,7 @@
             <li class="testimonials__slide swiper-slide">
               <div class="testimonials__user">
                 <div class="testimonials__img-box">
-                  <img src="./content/Testimonials/сhocolate.jpg" class="testimonials__img" alt="Edward Newgate">
+                  <img loading="lazy" src="./content/Testimonials/сhocolate.jpg" class="testimonials__img" alt="Edward Newgate">
                 </div>
                 <div class="testimonials__user-info">
                   <p class="testimonials__user-name">
@@ -269,7 +265,7 @@
           </div>
         </div>
       </section>
-      <section class="articles articles__inner container inner">
+      <section id="about" class="articles articles__inner container inner">
         <h2 class="articles__title">
           Check out our latest article
         </h2>
@@ -277,7 +273,7 @@
         <ul class="articles__cards">
           <li class="articles__card">
             <div class="articles__img-box">
-              <img src="./content/ArticleImage/1.jpg" width="369" height="246" alt="Injection">
+              <img loading="lazy" src="./content/ArticleImage/1.jpg" width="369" height="246" alt="Injection">
             </div>
             <div class="articles__card-content">
               <h3 class="articles__card-title">
@@ -295,7 +291,7 @@
           </li>
           <li class="articles__card">
             <div class="articles__img-box">
-              <img src="./content/ArticleImage/2.jpg" width="369" height="246" alt="doctor">
+              <img loading="lazy" src="./content/ArticleImage/2.jpg" width="369" height="246" alt="doctor">
             </div>
             <div class="articles__card-content">
               <h3 class="articles__card-title">
@@ -313,7 +309,7 @@
           </li>
           <li class="articles__card">
             <div class="articles__img-box">
-              <img src="./content/ArticleImage/3.jpg" width="369" height="246" alt="mask">
+              <img loading="lazy" src="./content/ArticleImage/3.jpg" width="369" height="246" alt="mask">
             </div>
             <div class="articles__card-content">
               <h3 class="articles__card-title">
