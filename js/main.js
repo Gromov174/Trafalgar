@@ -7,31 +7,44 @@ const nonActive = document.querySelectorAll('.disable-link')
 const link = document.querySelectorAll('a.anchor-link')
 
 
-function disablelink(className) {
-  className.forEach(d => {
+function disablelink(constName) {
+  constName.forEach(d => {
     d.addEventListener('click', (e) => {
       e.preventDefault()
     })
   })
 }
+function intClass(constName, action, className) {
+  if (action === 'remove') {
+    constName.classList.remove(className)
+  }
+  if (action === 'contains') {
+    constName.classList.contains(className)
+  }
+  if (action === 'toggle') {
+    constName.classList.toggle(className)
+  }
+  if (action === 'add') {
+    constName.classList.add(className)
+  }
+}
 
-disablelink(btn);
-disablelink(nonActive);
+disablelink(btn)
+disablelink(nonActive)
 
 
 link.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault()
-    if (overlay.classList.contains('header__nav-list--active') || burgerLine.classList.contains('header__burger-line--active')) {
-      overlay.classList.remove('header__nav-list--active')
-      burgerLine.classList.remove('header__burger-line--active')
-      noScroll.classList.remove('html--noscroll')
+    if (overlay.classList.contains('header__nav-list--active')) {
+      intClass(overlay, 'remove', 'header__nav-list--active')
+      intClass(burgerLine, 'remove', 'header__burger-line--active')
+      intClass(noScroll, 'remove', 'html--noscroll')
     }
     const href = this.getAttribute('href').substring(1)
     const scrollTarget = document.getElementById(href)
-    const topOffset = 20
     const elemenPosition = scrollTarget.getBoundingClientRect().top
-    const offsetPosition = elemenPosition - topOffset
+    const offsetPosition = elemenPosition - 10
 
     window.scrollBy({
       top: offsetPosition,
@@ -48,9 +61,10 @@ window.scroll({
 
 burger.addEventListener('click', (e) => {
   e.preventDefault()
-  burgerLine.classList.toggle('header__burger-line--active')
-  overlay.classList.toggle('header__nav-list--active')
-  noScroll.classList.toggle('html--noscroll')
+
+  intClass(burgerLine, 'toggle', 'header__burger-line--active')
+  intClass(overlay, 'toggle', 'header__nav-list--active')
+  intClass(noScroll, 'toggle', 'html--noscroll')
 })
 
 const swiper = new Swiper('.testimonials__slider', {
