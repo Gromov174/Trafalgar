@@ -61,7 +61,6 @@ window.scroll({
 
 burger.addEventListener('click', (e) => {
   e.preventDefault()
-
   intClass(burgerLine, 'toggle', 'header__burger-line--active')
   intClass(overlay, 'toggle', 'header__nav-list--active')
   intClass(noScroll, 'toggle', 'html--noscroll')
