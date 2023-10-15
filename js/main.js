@@ -6,7 +6,6 @@ const btn = document.querySelectorAll('.btn')
 const nonActive = document.querySelectorAll('.disable-link')
 const link = document.querySelectorAll('a.anchor-link')
 
-
 function disablelink(constName) {
   constName.forEach(d => {
     d.addEventListener('click', (e) => {
@@ -15,19 +14,9 @@ function disablelink(constName) {
   })
 }
 function intClass(constName, action, className) {
-  if (action === 'remove') {
-    constName.classList.remove(className)
-  }
-  if (action === 'contains') {
-    constName.classList.contains(className)
-  }
-  if (action === 'toggle') {
-    constName.classList.toggle(className)
-  }
-  if (action === 'add') {
-    constName.classList.add(className)
-  }
+  constName.classList[action](className)
 }
+
 
 disablelink(btn)
 disablelink(nonActive)

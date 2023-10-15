@@ -8,6 +8,10 @@
   }
 }
 
+@mixin flexibleFont($font) {
+  font-size: calc(100vw / $font * 10);
+}
+
 @mixin fontcalc($number) {
   font-size: calc($number / 10px * 1rem);
 }

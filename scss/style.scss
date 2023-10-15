@@ -6,29 +6,28 @@ body {
   position: relative;
   font-family: "Mulish", sans-serif;
   overflow-x: hidden;
-  font-size: calc(100vw / 1920 * 10);
-
+  @include flexibleFont(1920);
 
   @include desktop {
-    font-size: calc(100vw / 1440 * 10);
+    @include flexibleFont(1440);
   }
   @include small-desktop {
-    font-size: calc(100vw / 1024 * 10);
+    @include flexibleFont(1024);
   }
   @include large-tablet {
-    font-size: calc(100vw / 922 * 10);
+    @include flexibleFont(922);
   }
   @include tablet {
-    font-size: calc(100vw / 768 * 10);
+    @include flexibleFont(768);
   }
   @include large-phone {
-    font-size: calc(100vw / 576 * 10);
+    @include flexibleFont(576);
   }
   @include phone {
-    font-size: calc(100vw / 420 * 10);
+    @include flexibleFont(420);
   }
   @include mini-phone {
-    font-size: calc(100vw / 320 * 10);
+    @include flexibleFont(320); 
   }
 }
 
