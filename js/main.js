@@ -1,10 +1,24 @@
 const burger = document.querySelector('.header__burger')
-const burgerLine = document.querySelector('.header__burger-line')
-const overlay = document.querySelector('.header__nav-list')
-const noScroll = document.querySelector('.html')
-const btn = document.querySelectorAll('.btn')
-const nonActive = document.querySelectorAll('.disable-link')
-const link = document.querySelectorAll('a.anchor-link')
+burgerLine = document.querySelector('.header__burger-line')
+overlay = document.querySelector('.header__nav-list')
+noScroll = document.querySelector('.html')
+btn = document.querySelectorAll('.btn')
+nonActive = document.querySelectorAll('.disable-link')
+link = document.querySelectorAll('a.anchor-link')
+slider = new Swiper('.testimonials__slider', {
+  direction: 'horizontal',
+  loop: true,
+
+  pagination: {
+    el: '.testimonials__arrow-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.testimonials__arrow-next',
+    prevEl: '.testimonials__arrow-prev',
+  },
+})
 
 function disablelink(constName) {
   constName.forEach(d => {
@@ -54,21 +68,3 @@ burger.addEventListener('click', (e) => {
   intClass(overlay, 'toggle', 'header__nav-list--active')
   intClass(noScroll, 'toggle', 'html--noscroll')
 })
-
-const swiper = new Swiper('.testimonials__slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.testimonials__arrow-pagination',
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.testimonials__arrow-next',
-    prevEl: '.testimonials__arrow-prev',
-  },
-});
