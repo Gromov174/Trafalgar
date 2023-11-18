@@ -1,6 +1,7 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.querySelector(".header__burger"),
+    wrapper = document.querySelector(".wrapper"),
     burgerLine = document.querySelector(".header__burger-line"),
     overlay = document.querySelector(".header__nav-list"),
     noScroll = document.querySelector(".html"),
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     intClass = (constName, action, className) => {
       constName.classList[action](className);
     },
-    slider = new Swiper(".testimonials__slider", {
+    testimoinialsSlider = new Swiper(".testimonials__slider", {
       direction: "horizontal",
       loop: true,
 
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         elemenPosition = scrollTarget.getBoundingClientRect().top,
         offsetPosition = elemenPosition - 10;
 
-      window.scrollBy({
+      window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
       });

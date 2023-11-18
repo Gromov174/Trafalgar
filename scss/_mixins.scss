@@ -1,6 +1,6 @@
-@mixin fonts($family, $weigth, $name) {
+@mixin fonts($name, $weigth) {
   @font-face {
-    font-family: "#{$family}";
+    font-family: "Mulish";
     src: url("../fonts/#{$name}.woff2") format("woff2");
     font-weight: $weigth;
     font-style: normal;
